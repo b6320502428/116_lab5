@@ -5,7 +5,7 @@ int main()
     scanf("%d",&n);
     if(n%2==0)
     {
-        for(i=0; i<=n/2; i++)
+        for(i=0; i<n/2; i++)
         {
             for(j=0; j<n/2-i-1; j++)
             {
@@ -19,6 +19,19 @@ int main()
                     printf("_");
                 }
             }
+            else
+            {
+                for(j=0; j<2*i-1; j++)
+                {
+                    printf("_");
+                }
+                printf("*");
+                for(j=0; j<n/2-i-1; j++)
+                {
+                    printf("_");
+                }
+            }
+            printf("\n");
         }
         for(i=0; i<n/2; i++)
         {
