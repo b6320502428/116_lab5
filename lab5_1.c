@@ -14,19 +14,21 @@ int main ()
     {
         if(p[i][0]>48&&p[i][0]<58)
             num[i]=atoi(p[i]);
+        else if(p[i][0]=='-'&&p[i][1]>48&&p[i][1]<58)
+            num[i]=atoi(p[i]);
         else
             num[i]=0;
     }
     for(i=0; i<n; i++)
     {
-        if(p[i][0]=='-')
+        if(p[i][0]=='-'&&num[i]==0)
         {
-            for(j=i-1;j>0;j--)
+            for(j=i-1;j>=0;j--)
             {
                 if(num[j]!=0)
                     break;
             }
-            for(k=j-1;k>0;k--)
+            for(k=j-1;k>=0;k--)
             {
                 if(num[k]!=0)
                     break;
@@ -37,12 +39,12 @@ int main ()
         }
         else if(p[i][0]=='+')
         {
-            for(j=i-1;j>0;j--)
+            for(j=i-1;j>=0;j--)
             {
                 if(num[j]!=0)
                     break;
             }
-            for(k=j-1;k>0;k--)
+            for(k=j-1;k>=0;k--)
             {
                 if(num[k]!=0)
                     break;
@@ -53,12 +55,12 @@ int main ()
         }
         else if(p[i][0]=='*')
         {
-            for(j=i-1;j>0;j--)
+            for(j=i-1;j>=0;j--)
             {
                 if(num[j]!=0)
                     break;
             }
-            for(k=j-1;k>0;k--)
+            for(k=j-1;k>=0;k--)
             {
                 if(num[k]!=0)
                     break;
