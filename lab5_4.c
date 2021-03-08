@@ -3,10 +3,10 @@
 #include <string.h>
 int main ()
 {
-    int i,j,z=0;
-    char d[6],p[6],a[6];
+    int i,j,dn,pn,an;
+    char d[16],p[16],a[16];
     scanf("%s %s %s",&d,&p,&a);
-    for(i=0; i<strlen(d); i++)
+    /*for(i=0; i<strlen(d); i++)
     {
         if(p[i]>47&&p[i]<58)
             z++;
@@ -24,6 +24,13 @@ int main ()
     if(z==(strlen(d)+strlen(p)+strlen(a)))
     {
 
+    }*/
+    for(i=2;i<37;i++)
+    {
+        for(j=0;j<strlen(d);j++)
+        {
+
+        }
     }
     return 0;
 }
