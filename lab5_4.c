@@ -3,23 +3,27 @@
 #include <string.h>
 int main ()
 {
-    int i,j=0;
+    int i,j,z=0;
     char d[6],p[6],a[6];
     scanf("%s %s %s",&d,&p,&a);
     for(i=0; i<strlen(d); i++)
     {
-        if(p[i]>48&&p[i]<58)
-            j++;
+        if(p[i]>47&&p[i]<58)
+            z++;
     }
     for(i=0; i<strlen(p); i++)
     {
-        if(p[i]>48&&p[i]<58)
-            j++;
+        if(p[i]>47&&p[i]<58)
+            z++;
     }
     for(i=0; i<strlen(a); i++)
     {
-        if(p[i]>48&&p[i]<58)
-            j++;
+        if(p[i]>47&&p[i]<58)
+            z++;
+    }
+    if(z==(strlen(d)+strlen(p)+strlen(a)))
+    {
+
     }
     return 0;
 }
