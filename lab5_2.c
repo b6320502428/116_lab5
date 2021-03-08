@@ -92,6 +92,34 @@ int main()
             }
             printf("\n");
         }
+        for(i=n/2; i>0; i--)
+        {
+            for(j=0; j<n/2-i+1; j++)
+            {
+                printf("_");
+            }
+            printf("*");
+            if(i==1)
+            {
+                for(j=0; j<n/2-i+1; j++)
+                {
+                    printf("_");
+                }
+            }
+            else
+            {
+                for(j=0; j<2*i-3; j++)
+                {
+                    printf("_");
+                }
+                printf("*");
+                for(j=0; j<n/2-i+1; j++)
+                {
+                    printf("_");
+                }
+            }
+            printf("\n");
+        }
     }
     return 0;
 }
